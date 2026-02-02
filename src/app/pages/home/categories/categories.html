@@ -1,0 +1,34 @@
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+
+        <div class="section-header centered text-center">
+            <span class="section-badge">
+                <span class="pulse-dot"></span>
+                التصنيفات
+            </span>
+            <h2 class="section-title">استكشف حسب الموضوع</h2>
+            <p class="section-subtitle">اعثر على محتوى مصمم حسب اهتماماتك</p>
+        </div>
+
+        <div class="row g-3 g-md-4 categories-grid">
+            @for(category of categories; track $index) {
+                <div class="col-6 col-md-4 col-lg">
+                    <a href="/blog?category={{category.name}}" class="category-card">
+                        <div class="category-overlay"></div>
+                        <div class="category-content">
+                            <div class="category-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <h3 class="category-name">{{category.name}}</h3>
+                            <p class="category-count">{{category.count}} مقالة</p>
+                            <div class="category-arrow">
+                                <i class="fas fa-arrow-left"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

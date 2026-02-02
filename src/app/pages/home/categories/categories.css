@@ -1,0 +1,112 @@
+/* ===== Categories Grid ===== */
+/* ===== Categories Grid ===== */
+/* ===== Categories Grid ===== */
+.category-card {
+    position: relative;
+    display: block;
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    text-decoration: none;
+    transition: all var(--transition-slow);
+    height: 100%;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.category-card:hover .category-overlay {
+    opacity: 1;
+}
+
+.category-content {
+    position: relative;
+    z-index: 1;
+}
+
+.category-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-base);
+}
+
+.category-card:hover .category-icon {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+}
+
+.category-icon i {
+    font-size: 1.25rem;
+    color: var(--primary);
+    transition: color var(--transition-base);
+}
+
+.category-card:hover .category-icon i {
+    color: white;
+}
+
+.category-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    transition: color var(--transition-base);
+}
+
+.category-card:hover .category-name {
+    color: white;
+}
+
+.category-count {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    transition: color var(--transition-base);
+}
+
+.category-card:hover .category-count {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.category-arrow {
+    position: absolute;
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    width: 32px;
+    height: 32px;
+    background: var(--border-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all var(--transition-base);
+}
+
+.category-card:hover .category-arrow {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.category-arrow i {
+    color: white;
+    font-size: 0.875rem;
+} 
